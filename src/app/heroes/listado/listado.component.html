@@ -1,0 +1,13 @@
+
+<div *ngIf="heroes.length>0 else heroesNoExists">
+<p>listado de heroes</p>
+<ul>
+    <li *ngFor="let h of heroes">
+        {{h}}
+    </li>
+</ul>
+<button (click)="deleteFirst()">borrar heroe</button>
+</div>
+<ng-template #heroesNoExists>
+    <h3>Los heroes se fueron</h3>
+</ng-template>
